@@ -51,6 +51,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ungrim97/MooseX-CoercePerAttribute/issues"
+      },
+      "homepage" : "https://github.com/ungrim97/MooseX-CoercePerAttribute",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/ungrim97/MooseX-CoercePerAttribute.git",
+         "web" : "https://github.com/ungrim97/MooseX-CoercePerAttribute"
+      }
+   },
    "version" : "1.000",
    "x_contributors" : [
       "Mike Francis (mrf) <ungrim97@gmail.com>"
