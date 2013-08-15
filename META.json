@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "Define Coercions per attribute!",
    "author" : [
       "Mike Francis <ungrim97@gmail.com>"
    ],
@@ -36,16 +36,24 @@
       },
       "runtime" : {
          "requires" : {
+            "Moose" : "0",
+            "Moose::Role" : "0",
+            "Moose::Util" : "0",
+            "Moose::Util::TypeConstraints" : "0",
             "perl" : "5.008005"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.88"
+            "Data::Dumper" : "0",
+            "Test::Most" : "0.31"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "1.000",
+   "x_contributors" : [
+      "Mike Francis (mrf) <ungrim97@gmail.com>"
+   ]
 }
 
