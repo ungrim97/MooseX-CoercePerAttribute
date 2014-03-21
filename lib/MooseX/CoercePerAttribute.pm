@@ -15,7 +15,7 @@ before _process_coerce_option => sub {
     my $coercion = $options->{coerce};
     return unless $coercion && $coercion != 1;
 
-    # Create an anonomous subtype of the TC object so as to not mess with the existing TC
+    # Create an anonymous subtype of the TC object so as to not mess with the existing TC
     my $anon_subtype = $options->{type_constraint} = Moose::Meta::TypeConstraint->new(
         parent => $options->{type_constraint},
     );
@@ -27,7 +27,7 @@ before _process_coerce_option => sub {
 
     my @coercions;
 
-    # NOTE: Depricated bahviour. Just set it to the approved usage.
+    # NOTE: Depricated behavior. Just set it to the approved usage.
     # TODO: Remove in version 1.000
     if (ref $coercion eq 'HASH'){
         warn "The use of a HashRef for declaration of inline coercions is depricated. See perldoc MooseX::CoercePerAttribute. This feature will be removed in version 1.100 of MooseX::CoercePerAttribute";
@@ -115,19 +115,19 @@ MooseX::CoercePerAttribute - Define Coercions per attribute!
 
 MooseX::CoercePerAttribute is a simple Moose Trait to allow you to define inline coercions per attribute.
 
-This module allows for coercions to be declasred on a per attribute bases. Accepting either an array of  Code refs of the coercion to be run or an HashRef of various arguments to create a coearcion routine from .
+This module allows for coercions to be declared on a per attribute bases. Accepting either an array of  Code refs of the coercion to be run or an HashRef of various arguments to create a coercion routine from.
 
 =head1 USAGE
 
 This trait allows you to declare a type coercion inline for an attribute. The Role will create an __ANON__ sub TypeConstraint object of the TypeConstraint in the attributes isa parameter. The type coercion can be supplied in one of two methods. The coercion should be supplied to the Moose Attribute coerce parameter.
 
-1. The recomended usage is to supply a arrayref list declaring the types to coerce from and a subref to be excuted in pairs.
+1. The recomended usage is to supply a arrayref list declaring the types to coerce from and a subref to be executed in pairs.
     coerce => [$Fromtype1 => sub {}, $Fromtype2 => sub {}]
 
 2. Alternatively you can supply and arrayref of coercion coderefs. These should be in the same format as defined in L<Moose::Util::TypeConstraints> and will be passed the __ANON__ subtype as its first argument. If you use this method then you will need to use Moose::Util::TypeConstraints in you module.
     coerce => [sub {coerce $_[0], from Str, via sub {} }]
 
-NB: Moose handles its coercions as an array of possibe coercions. This means that it will use the first coercion in the list that matches the criteria. In earlier versions of this module the coercions were supplied as a HASHREF. This behaviour is deprecated and will be removed in later versions as it creates an uncertainty over the order of usage.
+NB: Moose handles its coercions as an array of possible coercions. This means that it will use the first coercion in the list that matches the criteria. In earlier versions of this module the coercions were supplied as a HASHREF. This behaviour is deprecated and will be removed in later versions as it creates an uncertainty over the order of usage.
 
 =head1 AUTHOR
 
