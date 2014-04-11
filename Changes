@@ -1,6 +1,8 @@
 Revision history for MooseX-CoercePerAttribute
 
 {{$NEXT}}
+
+1.001 2014-04-11T15:56:18Z
         - Migrated to Minilla
         - Updated POD issues
 

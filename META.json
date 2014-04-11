@@ -69,7 +69,7 @@
          "web" : "https://github.com/ungrim97/MooseX-CoercePerAttribute"
       }
    },
-   "version" : "1.000",
+   "version" : "1.001",
    "x_contributors" : [
       "Chris Weyl <cweyl@alumni.drew.edu>",
       "David Steinbrunner <dsteinbrunner@pobox.com>",

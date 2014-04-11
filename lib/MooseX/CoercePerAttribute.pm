@@ -3,7 +3,7 @@ package MooseX::CoercePerAttribute;
 use strict;
 use 5.008_005;
 
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 
 use Moose::Role;
 use Moose::Util::TypeConstraints;
